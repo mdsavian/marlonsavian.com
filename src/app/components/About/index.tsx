@@ -1,6 +1,7 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { AvatarShapes } from "../../../assets/avatar-shapes.svg";
+import AvatarShapes from "../../../assets/avatar-shapes.svg";
+import Image from "next/image";
 
 const About: React.FC = () => {
   return (
@@ -16,24 +17,25 @@ const About: React.FC = () => {
         mt="calc(11.2em + 2em)"
         sx={{
           maxWidth: "1500px",
-          paddingLeft: "6rem",
-          paddingRight: "6rem",
+          padding: "0 10rem",
         }}
         alignContent="center"
         display="flex"
         justifyContent="space-between"
       >
         <Grid display="block">
-          <Typography variant="h2" color="secondary" fontWeight={600} align="left">
-            Hi, I'm Marlon, Fullstack Developer
+          <Typography variant="h1" color="secondary" fontWeight={600} align="left" fontSize="3.4em">
+            {`Fullstack Developer`}
           </Typography>
-          <Typography variant="h5" color="white">
+          <span style={{ color: "white" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
-          </Typography>
+          </span>
         </Grid>
-        <Grid>
-          <figure>{/* <AvatarShapes /> */}</figure>
+        <Grid mt="-5.5em">
+          <figure>
+            <Image src={AvatarShapes} alt="My SVG" width={550} height={430} />
+          </figure>
         </Grid>
       </Grid>
     </section>

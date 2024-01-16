@@ -1,6 +1,6 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -14,14 +14,20 @@ const Header = () => {
         zIndex: 2000,
         background: "transparent",
         boxShadow: "none",
-        paddingLeft: "6rem",
-        paddingRight: "6rem",
-        height: "11.12em",
+        paddingLeft: {
+          md: "6rem",
+          xs: "3rem",
+        },
+        paddingRight: {
+          md: "6rem",
+          xs: "3rem",
+        },
+        height: "8em",
         justifyContent: "center",
       }}
     >
       <Toolbar>
-        <Link href="/" color="secondary" sx={{ flexGrow: 1, textDecoration: "none" }}>
+        <Link href="/" color="secondary" sx={{ textDecoration: "none", flexGrow: 1 }}>
           <Typography variant="h4" color="secondary" fontWeight={600}>
             Marlon Savian
           </Typography>

@@ -15,6 +15,7 @@ const About: React.FC = () => {
         backgroundColor: {
           xs: "primary.main",
         },
+        paddingBottom: "4rem",
       }}
       display="flex"
     >
@@ -40,16 +41,12 @@ const About: React.FC = () => {
             fontWeight={600}
             mb="25px"
             textAlign="left"
-            sx={{
-              maxWidth: {
-                md: "30vw",
-              },
-            }}
+            maxWidth="30vw"
           >
-            {`Fullstack Developer`}
+            Fullstack Developer
           </Typography>
 
-          <span style={{ color: "white" }}>
+          <span style={{ color: "white", maxWidth: "400px", fontSize: "1rem" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
           </span>

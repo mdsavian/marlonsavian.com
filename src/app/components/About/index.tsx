@@ -52,6 +52,39 @@ const About: React.FC = () => {
           </span>
         </Grid>
 
+        <Grid
+          sx={{
+            color: "secondary.main",
+            padding: {
+              xs: "0 15vw",
+              md: "0 10em",
+            },
+            marginTop: "3em",
+            maxWidth: "1500px",
+          }}
+          alignItems="center"
+          justifyContent="space-between"
+        >
+          <ul
+            style={{
+              margin: "0",
+              padding: "0",
+              listStyle: "none",
+              fontSize: "0.8rem",
+              width: "65%",
+              justifyContent: "space-between",
+              display: "flex",
+            }}
+          >
+            <li style={{ width: "calc(50% - 1.5rem)" }}>
+              Highly skilled at progressive enhancement, design systems &amp; UI Engineering.
+            </li>
+            <li style={{ width: "calc(50% - 1.5rem)" }}>
+              Over a decade of experience building products for clients across several countries.
+            </li>
+          </ul>
+        </Grid>
+
         {/* <Grid>
         
         

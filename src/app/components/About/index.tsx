@@ -1,114 +1,27 @@
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import AvatarShapes from "../../../assets/avatar-shapes.svg";
-import Image from "next/image";
-import theme from "@/theme";
-
 const About: React.FC = () => {
   return (
-    <>
-      {/* */}
-      <div
-        className="              
-        
-        // bg-about
-        sm:bg-blue
-        
+    <section className="md:bg-about bg-blue pb-32">
+      <div className="flex flex-col mt-32 md:mt-40 lg:mt-48 max-w-screen-2xl py-0 md:px-24 lg:px-32 px-[12vw]">
+        <h1 className="text-green text-5xl md:text-6xl lg:text-7xl font-black text-left max-w-[30vw]">
+          Fullstack Developer
+        </h1>
+        <span className="text-white max-w-md mt-8 md:text-1xl text-md">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </span>
 
-       h-72"
-      ></div>
-
-      {/* <Box
-        sx={{
-          background: {
-            md: "transparent",
-          },
-          backgroundColor: {
-            xs: "primary.main",
-          },
-          paddingBottom: "4rem",
-        }}
-        display="flex"
-      >
-        <section>
-          <Grid
-            sx={{
-              marginTop: {
-                xs: "8em",
-                md: "10em",
-              },
-              padding: {
-                xs: "0 15vw",
-                md: "0 10em",
-              },
-              maxWidth: "1500px",
-            }}
-            display="flex"
-            flexDirection="column"
-          >
-            <Typography
-              variant="h3"
-              color="secondary"
-              fontWeight={600}
-              mb="25px"
-              textAlign="left"
-              maxWidth="30vw"
-            >
-              Fullstack Developer
-            </Typography>
-
-            <span style={{ color: "white", maxWidth: "400px", fontSize: "1rem" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </span>
-          </Grid>
-
-          <Grid
-            sx={{
-              color: "secondary.main",
-              padding: {
-                xs: "0 15vw",
-                md: "0 10em",
-              },
-              marginTop: "3em",
-              maxWidth: "1500px",
-            }}
-            alignItems="center"
-            justifyContent="space-between"
-          >
-            <ul
-              style={{
-                margin: "0",
-                padding: "0",
-                listStyle: "none",
-                fontSize: "0.8rem",
-                width: "65%",
-                justifyContent: "space-between",
-                display: "flex",
-              }}
-            >
-              <li style={{ width: "calc(50% - 1.5rem)" }}>
-                Highly skilled at progressive enhancement, design systems &amp; UI Engineering.
-              </li>
-              <li style={{ width: "calc(50% - 1.5rem)" }}>
-                Over a decade of experience building products for clients across several countries.
-              </li>
-            </ul>
-          </Grid>
-
-          {/* <Grid>
-        
-        
-        </Grid>
-        <Grid mt="-5.5em">
-          <figure>
-            <Image src={AvatarShapes} alt="My SVG" width={550} height={430} />
-          </figure> */}
-      {/* </Grid>  
-        </section>
-      </Box> */}
-    </>
+        <div className="text-green max-w-md mt-16">
+          <ul className="flex text-sm">
+            <li className="mr-2">
+              Highly skilled at progressive enhancement, design systems &amp; UI Engineering.
+            </li>
+            <li className="w-[calc(50% - 2rem)]">
+              Over a decade of experience building products for clients across several countries.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 };
 

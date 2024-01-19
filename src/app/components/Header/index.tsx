@@ -2,7 +2,7 @@ import * as React from "react";
 
 const Header = () => {
   return (
-    <nav className="bg-transparent px-12 md:px-24 h-32 z-50 flex items-center flex-wrap w-full fixed">
+    <nav className="bg-transparent px-12 md:px-20 h-32 z-50 flex items-center flex-wrap w-full fixed">
       <div className="flex grow items-center min-h-16">
         <div className="flex grow text-4xl font-bold ">
           <a href="/" className="block text-green">

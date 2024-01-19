@@ -14,9 +14,9 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#4831d4", // eletricBlue
+      main: "#4831d4", // blue
     },
-    secondary: { main: "#ccf381" }, // lime
+    secondary: { main: "#ccf381" }, // green
   },
 });
 

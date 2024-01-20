@@ -13,16 +13,19 @@ body {
 }
 
 html {
-  
-  @media (min-width: 701px ) and (max-width: 1600px) {
+  @media (min-width: 701px) and (max-width: 1600px) {
     font-size: 1vw;
   }
 
-  @media (min-width: 1601px )  {
+  @media (min-width: 1601px) {
     font-size: 1.013rem;
   }
 
-  @media (max-width: 700px )  {
+  @media (min-width: 640px) and (max-width: 700px) {
+    font-size: 0.462rem;
+  }
+
+  @media (min-width: 0px) and (max-width: 639px) {
     font-size: 0.662rem;
   }
 }

@@ -4,11 +4,11 @@ import About from "./components/About";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Header />
       <main className={styles.main}>
         <About />
       </main>
-    </>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import AvatarShapes from "@/assets/avatar-shapes.svg";
 const About: React.FC = () => {
   return (
     <section className="sm:bg-about bg-blue pb-32 w-full relative">
-      <div className="flex flex-row items-center mt-52 max-w-screen-2xl py-0 md:px-[12vw] sm:px-28 justify-between">
+      <div className="flex flex-row items-center mt-52 py-0 md:px-[12vw] sm:px-28 justify-between">
         <div className="flex flex-col text-left relative">
           <h1 className="text-green text-7xl font-black max-w-[30vw]">Fullstack Developer</h1>
 
@@ -14,7 +14,7 @@ const About: React.FC = () => {
           </span>
         </div>
 
-        <figure className="w-[23rem] h-[24rem] mr-20 relative border-[0.115rem] border-solid border-white ">
+        <figure className="w-[23rem] h-[24rem] mr-20 2xl:mr-[20rem] relative border-[0.115rem] border-solid border-white ">
           <AvatarShapes className="top-[-25%] w-[40rem] h-[126%] right-[-5.4rem] absolute" />
           <span
             className="block mt-[-2.4rem] bg-white bg-cover ml-[-2.2rem]"
@@ -28,7 +28,7 @@ const About: React.FC = () => {
           />
         </figure>
       </div>
-      <div className="text-green max-w-screen-2xl py-0 md:px-[12vw] sm:px-28 mt-12">
+      <div className="text-green py-0 md:px-[12vw] sm:px-28 mt-12">
         <ul className="flex md:text-lg sm:w-4/6 md:w-3/6 text-2xl xs:text-2xl ">
           <li className="mr-3">
             Highly skilled at progressive enhancement, design systems &amp; UI Engineering.

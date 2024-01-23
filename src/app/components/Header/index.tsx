@@ -15,7 +15,7 @@ const Header = () => {
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
-            className="w-10 h-10 md:stroke-blue stroke-green"
+            className="w-10 h-10 sm:stroke-blue stroke-green"
           >
             <path
               strokeLinecap="round"

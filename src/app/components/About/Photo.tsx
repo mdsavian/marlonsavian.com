@@ -1,9 +1,17 @@
 import PhotoShapes from "@/assets/photo-shapes.svg";
 
-const Photo = () => {
+interface IPhoto {
+  fillSvg?: string;
+  strokeSvg?: string;
+}
+const Photo = ({ fillSvg, strokeSvg }: IPhoto) => {
   return (
-    <figure className="hidden sm:block w-[23rem] h-[24rem] mr-20 2xl:mr-[15rem] relative border-[0.115rem] border-solid border-white ">
-      <PhotoShapes className="top-[-25%] w-[40rem] h-[126%] right-[-5.4rem] absolute" />
+    <figure className="relative w-[20rem] sm:w-[23rem] h-[20rem] sm:h-[24rem] sm:mr-20 2xl:mr-[15rem] z-[1] ml-[2.2rem] sm:ml-0 border-[0.115rem] border-solid border-white">
+      <PhotoShapes
+        className="absolute top-[-25%] w-[35rem] sm:w-[40rem] h-[126%] right-[-3.4rem] sm:right-[-5.4rem] z-[-1]"
+        fill={fillSvg}
+        stroke={strokeSvg}
+      />
       <span
         className="block mt-[-2.4rem] bg-white bg-cover ml-[-2.2rem]"
         aria-label="marlon photo"

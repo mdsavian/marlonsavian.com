@@ -1,4 +1,3 @@
-import PhotoShapes from "@/assets/photo-shapes.svg";
 import Photo from "./Photo";
 
 const About: React.FC = () => {
@@ -15,19 +14,9 @@ const About: React.FC = () => {
           </span>
         </div>
 
-        <figure className="hidden sm:block w-[23rem] h-[24rem] mr-20 2xl:mr-[15rem] relative border-[0.115rem] border-solid border-white ">
-          <PhotoShapes className="top-[-25%] w-[40rem] h-[126%] right-[-5.4rem] absolute z-[-1]" />
-          <span
-            className="block mt-[-2.4rem] bg-white bg-cover ml-[-2.2rem]"
-            aria-label="marlon photo"
-            style={{
-              width: "inherit",
-              height: "inherit",
-              backgroundPositionX: "center",
-              backgroundImage: "url(marlon.jpeg)",
-            }}
-          />
-        </figure>
+        <div className="hidden sm:block">
+          <Photo />
+        </div>
       </div>
       <div className="text-green py-0 px-[12vw] px-16 mt-32 md:mt-12 mb-16 sm:mb-0">
         <ul className="flex md:text-lg w-full sm:w-3/6 md:text-2xl text-lg">
@@ -40,23 +29,7 @@ const About: React.FC = () => {
         </ul>
       </div>
       <div className="block sm:hidden flex items-center justify-center pt-32 pb-20 bg-green">
-        <figure className="relative w-[20rem] h-[20rem] border-[0.115rem] border-solid border-white z-[1] ml-[2.2rem]">
-          <PhotoShapes
-            fill="blue"
-            stroke="blue"
-            className="top-[-25%] w-[35rem] h-[126%] right-[-3.4rem] absolute z-[-1]"
-          />
-          <span
-            className="block mt-[-2.4rem] bg-white bg-cover ml-[-2.2rem]"
-            aria-label="marlon photo"
-            style={{
-              width: "inherit",
-              height: "inherit",
-              backgroundPositionX: "center",
-              backgroundImage: "url(marlon.jpeg)",
-            }}
-          />
-        </figure>
+        <Photo fillSvg="blue" strokeSvg="blue" />
       </div>
     </section>
   );

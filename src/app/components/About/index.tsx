@@ -3,7 +3,7 @@ import Photo from "./Photo";
 const About: React.FC = () => {
   return (
     <section className="sm:bg-about bg-blue pb-12 md:pb-32 w-full relative">
-      <div className="flex flex-row items-center mt-52 py-0 md:px-[12vw] px-16 justify-between">
+      <div className="flex flex-row items-center mt-52 py-0 px-[12vw] px-16 justify-between">
         <div className="flex flex-col text-left relative">
           <h1 className="text-green text-7xl font-black max-w-[30vw] ">Fullstack Developer</h1>
 
@@ -16,7 +16,7 @@ const About: React.FC = () => {
 
         <Photo />
       </div>
-      <div className="text-green py-0 md:px-[12vw] px-16 mt-32 md:mt-12">
+      <div className="text-green py-0 px-[12vw] px-16 mt-32 md:mt-12">
         <ul className="flex md:text-lg w-full sm:w-3/6 md:text-2xl text-lg">
           <li className="md:mr-3 mr-6">
             Highly skilled at progressive enhancement, design systems &amp; UI Engineering.

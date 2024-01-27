@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="text-green py-0 px-16 sm:px-40 mt-32 md:mt-12 mb-16 sm:mb-0">
+      <div className="text-green py-0 px-16 sm:px-40 mt-32 md:mt-12 mb-16 sm:mb-0 w-full max-w-screen-2xl2xl:max-w-[1700px]">
         <Highlights />
       </div>
 

@@ -38,7 +38,7 @@ module.exports = {
         "fade-in-1": "fadeIn 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0)",
         "fade-in-2": "fadeIn 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0)",
         "fade-in-3": "fadeIn 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0)",
-        "fade-in-up": "fadeInUp 0.8s ease-out",
+        "fade-in-up": "fadeInUp 1.5s ease-out forwards",
       },
     },
   },

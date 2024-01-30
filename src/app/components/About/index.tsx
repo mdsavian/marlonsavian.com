@@ -9,7 +9,7 @@ const AboutMe = () => {
             tag="h1"
             id="header-about-me"
             animationClass="animate-fade-in-up"
-            className="text-blue text-7xl font-black sm:max-w-[30vw] max-w-full"
+            className="text-blue text-7xl font-black sm:max-w-[30vw] max-w-full opacity-0"
           >
             About me
           </AnimatedComponent>
@@ -42,9 +42,15 @@ const AboutMe = () => {
 
         <div className="mt-16 flex justify-end relative text-left">
           <div className="flex flex-col">
-            <h1 className="text-blue text-7xl font-black sm:max-w-[30vw] max-w-full opacity-0">
+            <AnimatedComponent
+              tag="h1"
+              id="header-whats-next"
+              className="text-blue text-7xl font-black sm:max-w-[30vw] max-w-full opacity-0"
+              animationClass="animate-fade-in-up"
+            >
               Whats next
-            </h1>
+            </AnimatedComponent>
+
             <AnimatedComponent
               tag="span"
               className="text-purple mt-8 text-2xl md:text-xl md:max-w-2xl sm:max-w-xl opacity-0"

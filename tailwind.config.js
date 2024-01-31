@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: "#4831d4",
-        green: "#ccf381",
+        blue: "#072072",
+        green: "#94C100",
         blueLight: "#F9F9F9",
-        purple: "#3d155f",
+        purple: "#3556C3",
       },
       backgroundImage: (theme) => ({
         about: `linear-gradient(90deg, ${theme("colors.blue")} 67%, ${theme("colors.green")} 33%)`,

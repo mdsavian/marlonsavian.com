@@ -1,7 +1,7 @@
 const Mentoria: React.FC = () => {
   return (
     <div className="h-screen md:flex">
-      <div className="relative overflow-hidden md:flex w-1/2 bg-mentoria i justify-around items-center hidden">
+      <div className="relative overflow-hidden md:flex w-1/2 bg-mentorship i justify-around items-center hidden">
         <div>
           <h1 className="text-white font-bold text-4xl font-sans">Mentoria</h1>
           <p className="text-white mt-1">

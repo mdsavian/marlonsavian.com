@@ -11,6 +11,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         about: `linear-gradient(90deg, ${theme("colors.blue")} 67%, ${theme("colors.green")} 33%)`,
+        mentorship: "linear-gradient(179.2deg, rgb(21, 21, 212) 0.9%, rgb(53, 220, 243) 95.5%)",
       }),
       keyframes: {
         fadeIn: {

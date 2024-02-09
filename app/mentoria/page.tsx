@@ -1,21 +1,14 @@
 const Mentoria: React.FC = () => {
   return (
     <div className="h-screen md:flex">
-      <div className="relative overflow-hidden md:flex w-1/2 bg-mentorship i justify-around items-center hidden">
-        <div>
-          <h1 className="text-white font-bold text-4xl font-sans">Mentoria</h1>
-          <p className="text-white mt-1">
+      <div className="h-screen relative overflow-hidden w-full flex bg-mentorship i justify-center items-center flex-col">
+        <div className="px-8">
+          <h1 className="text-white font-bold text-4xl font-sans text-center">Mentoria</h1>
+          <p className="text-white mt-6">
             Se cadastre para concorrer a uma hora de mentoria DE GRAÇA
           </p>
         </div>
-        <div className="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div className="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div className="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-        <div className="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-      </div>
-
-      <div className="flex md:w-1/2 justify-center items-center bg-white">
-        <form className="bg-white md:w-1/2">
+        <form className="bg-white mt-24">
           <h1 className="text-gray-800 font-bold text-2xl mb-7">Se cadastre!</h1>
           <div className="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
             <svg
@@ -46,12 +39,7 @@ const Mentoria: React.FC = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-              />
+              <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
             </svg>
             <input
               className="pl-2 outline-none border-none w-full"
@@ -105,6 +93,10 @@ const Mentoria: React.FC = () => {
             Cadastrar
           </button>
         </form>
+        <div className="hidden md:block absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+        <div className="hidden md:block absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+        <div className="hidden md:block absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+        <div className="hidden md:block absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
       </div>
     </div>
   );

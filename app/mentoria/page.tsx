@@ -2,6 +2,7 @@
 import { FormValues, schema } from "./schema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import toast, { Toaster } from "react-hot-toast";
 
 const Mentoria: React.FC = () => {
   const {
@@ -21,6 +22,14 @@ const Mentoria: React.FC = () => {
       },
       body: JSON.stringify({ email, nome, telefone, linkedin }),
     });
+
+    const data = await res.json();
+
+    if (data.success) {
+      toast.success(data.message);
+    } else {
+      toast.error(data.message);
+    }
   };
 
   const onSubmit = (data: FormValues) => {
@@ -44,6 +53,8 @@ const Mentoria: React.FC = () => {
 
   return (
     <div className="h-screen md:flex">
+      <Toaster />
+
       <div className="h-screen relative overflow-hidden w-full flex bg-mentorship i justify-center items-center flex-col">
         <div className="px-8">
           <p className="text-white mt-6 text-center text-3xl font-sans">

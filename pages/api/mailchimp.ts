@@ -1,14 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import mailchimp from "@mailchimp/mailchimp_marketing";
 
-type ResponseData = {
+export type ResponseData = {
   error?: boolean;
   success?: boolean;
   message: string;
-};
-
-type ErrorWith = {
-  title: string;
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<ResponseData>) {
@@ -20,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   });
 
   try {
-    const res = await mailchimp.lists.addListMember(
+    await mailchimp.lists.addListMember(
       process.env.NEXT_PUBLIC_MAIL_CHIMP_MENTORSHIP_ID_LIST || "",
       {
         email_address: email,
@@ -32,13 +28,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         },
       }
     );
-  } catch (err: unknown) {
-    const knownError = err as ErrorWith;
-
-    const message =
-      knownError.title === "Member exists" ? "Usuário já cadastrado" : knownError.title;
-
-    return res.status(400).send({ error: true, message });
+  } catch (err) {
+    return res.status(400).send({ error: true, message: "Erro ao cadastrar o usuário" });
   }
 
   return res.json({ success: true, message: "Usuário cadastrado com sucesso" });

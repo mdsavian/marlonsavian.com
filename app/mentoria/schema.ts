@@ -7,8 +7,6 @@ export type FormValues = {
   linkedin: string;
 };
 
-const phoneRegExp = /^\\([0-9]{2}\\)((3[0-9]{7})|(9[0-9]{8}))$/;
-
 export const schema = yup
   .object()
   .shape({

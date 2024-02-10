@@ -1,4 +1,37 @@
+"use client";
+import { FormValues, schema } from "./schema";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+
 const Mentoria: React.FC = () => {
+  const {
+    formState: { errors },
+    handleSubmit,
+    register,
+    setValue,
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = (data: FormValues) => {
+    console.log({ data });
+  };
+
+  const phoneMask = (value: string) => {
+    if (!value) return "";
+    value = value.replace(/\D/g, "");
+    value = value.replace(/(\d{2})(\d)/, "($1) $2");
+    value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+    setValue("telefone", value);
+
+    return value;
+  };
+
+  const handlePhone = (event: React.ChangeEvent<HTMLInputElement>) => {
+    let input = event.target;
+    input.value = phoneMask(input.value);
+  };
+
   return (
     <div className="h-screen md:flex">
       <div className="h-screen relative overflow-hidden w-full flex bg-mentorship i justify-center items-center flex-col">
@@ -8,7 +41,10 @@ const Mentoria: React.FC = () => {
             com uma avaliação totalmente <strong>GRÁTIS?</strong>
           </p>
         </div>
-        <form className="mt-20 bg-white p-8 md:p-16 rounded-2xl min-w-[320px]">
+        <form
+          className="mt-20 bg-white p-8 md:p-16 rounded-2xl min-w-[320px]"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <h1 className="text-gray-800 font-bold text-2xl text-center mb-7 font-sans">
             Deixe seus dados abaixo!
           </h1>
@@ -22,6 +58,7 @@ const Mentoria: React.FC = () => {
               <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
             </svg>
             <input
+              {...register("nome")}
               className="pl-2 outline-none border-none w-full"
               type="text"
               name="nome"
@@ -29,6 +66,8 @@ const Mentoria: React.FC = () => {
               placeholder="Nome completo"
             />
           </div>
+          <p className="text-red-500 my-2">{errors.nome?.message}</p>
+
           <div className="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +79,7 @@ const Mentoria: React.FC = () => {
               <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
             </svg>
             <input
+              {...register("email")}
               className="pl-2 outline-none border-none w-full"
               type="text"
               name="email"
@@ -47,6 +87,7 @@ const Mentoria: React.FC = () => {
               placeholder="joao@gmail.com"
             />
           </div>
+          <p className="text-red-500 my-2">{errors.email?.message}</p>
 
           <div className="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
             <svg
@@ -60,6 +101,8 @@ const Mentoria: React.FC = () => {
             </svg>
 
             <input
+              {...register("telefone")}
+              onChange={handlePhone}
               className="pl-2 outline-none border-none w-full"
               type="text"
               name="telefone"
@@ -67,6 +110,7 @@ const Mentoria: React.FC = () => {
               placeholder="(xx) xxxxx-xxxx"
             />
           </div>
+          <p className="text-red-500 my-2">{errors.telefone?.message}</p>
 
           <div className="flex items-center border-2 py-2 px-3 rounded-2xl">
             <svg
@@ -78,6 +122,7 @@ const Mentoria: React.FC = () => {
               <path d="M1168 601.321v74.955c72.312-44.925 155.796-71.11 282.643-71.11 412.852 0 465.705 308.588 465.705 577.417v733.213L1438.991 1920v-701.261c0-117.718-42.162-140.06-120.12-140.06-74.114 0-120.12 23.423-120.12 140.06V1920l-483.604-4.204V601.32H1168Zm-687.52-.792v1318.918H0V600.53h480.48Zm-120.12 120.12H120.12v1078.678h240.24V720.65Zm687.52.792H835.267v1075.316l243.364 2.162v-580.18c0-226.427 150.51-260.18 240.24-260.18 109.55 0 240.24 45.165 240.24 260.18v580.18l237.117-2.162v-614.174c0-333.334-93.573-457.298-345.585-457.298-151.472 0-217.057 44.925-281.322 98.98l-16.696 14.173H1047.88V721.441ZM240.24 0c132.493 0 240.24 107.748 240.24 240.24 0 132.493-107.747 240.24-240.24 240.24C107.748 480.48 0 372.733 0 240.24 0 107.748 107.748 0 240.24 0Zm0 120.12c-66.186 0-120.12 53.934-120.12 120.12s53.934 120.12 120.12 120.12 120.12-53.934 120.12-120.12-53.934-120.12-120.12-120.12Z"></path>
             </svg>
             <input
+              {...register("linkedin")}
               className="pl-2 outline-none border-none w-full"
               type="text"
               name="linkedin"
@@ -85,6 +130,7 @@ const Mentoria: React.FC = () => {
               placeholder="https://www.linkedin.com/in/seu-perfil"
             />
           </div>
+          <p className="text-red-500 my-2">{errors.linkedin?.message}</p>
           <button
             type="submit"
             className="block w-full bg-indigo-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"

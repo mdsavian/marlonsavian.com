@@ -13,8 +13,18 @@ const Mentoria: React.FC = () => {
     resolver: yupResolver(schema),
   });
 
+  const addContactToMailChimp = async ({ email, nome, telefone, linkedin }: FormValues) => {
+    const res = await fetch("/api/mailchimp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, nome, telefone, linkedin }),
+    });
+  };
+
   const onSubmit = (data: FormValues) => {
-    console.log({ data });
+    addContactToMailChimp(data);
   };
 
   const phoneMask = (value: string) => {

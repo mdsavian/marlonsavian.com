@@ -1,4 +1,3 @@
-import Github from "@/assets/github.svg";
 const Footer = () => {
   const year = new Date().getFullYear();
 

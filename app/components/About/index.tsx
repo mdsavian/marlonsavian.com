@@ -20,14 +20,16 @@ const AboutMe = () => {
             id="span-about-me-one"
             animationClass="animate-fade-in-1"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            In 2008, my journey as a programmer began with creating bots for the game Tibia,
             <AnimatedComponent
               tag="span"
               className="opacity-0"
               id="span-about-me-two"
               animationClass="animate-fade-in-2"
             >
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+              {" "}
+              sparking a passion that shaped my career.
+              <br /> A few years later, I started a course where
             </AnimatedComponent>
             <AnimatedComponent
               tag="span"
@@ -35,7 +37,8 @@ const AboutMe = () => {
               id="span-about-me-three"
               animationClass="animate-fade-in-3"
             >
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              {" "}
+              I wrote my first programs, and that&#39;s when I went down the coding rabbit hole.
             </AnimatedComponent>
           </AnimatedComponent>
         </div>
@@ -57,22 +60,17 @@ const AboutMe = () => {
               id="span-whats-next-one"
               animationClass="animate-fade-in-1"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              In addition to programming, I dedicate my free time to creating content on Instagram
+              and TikTok
               <AnimatedComponent
                 tag="span"
                 className="opacity-0"
                 id="span-whats-next-two"
                 animationClass="animate-fade-in-2"
               >
-                incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-              </AnimatedComponent>
-              <AnimatedComponent
-                tag="span"
-                className="opacity-0"
-                id="span-whats-next-three"
-                animationClass="animate-fade-in-3"
-              >
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                {" "}
+                with the goal of helping aspiring developers navigate the complexities of the job
+                market.
               </AnimatedComponent>
             </AnimatedComponent>
           </div>

@@ -8,7 +8,7 @@ const Title = () => {
       className="text-green text-7xl font-black max-w-[30vw] opacity-0"
       animationClass="animate-fade-in-up"
     >
-      Software <br /> Engineer
+      Marlon <br /> Savian
     </AnimatedComponent>
   );
 };

@@ -8,9 +8,9 @@ const SubTitle = () => {
       id="span-description"
       animationClass="animate-fade-in-up"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      <br /> sed do eiusmod tempor incididunt <br />
-      ut labore et dolore magna aliqua.
+      I&#39;m a software engineer who likes to craft solid
+      <br /> and scalable products, always thinking about creating
+      <br />a exceptional user experience.
     </AnimatedComponent>
   );
 };

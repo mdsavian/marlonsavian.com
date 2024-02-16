@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Bottom from "./components/Bottom";
 import Footer from "./components/Footer";
+import Mentoria from "./mentoria/page";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Bottom />
         <Footer />
       </main>
+      <Mentoria />
     </div>
   );
 }

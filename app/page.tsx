@@ -8,13 +8,13 @@ import Mentoria from "./mentoria/page";
 export default function Home() {
   return (
     <div className="relative">
-      <Header />
+      {/* <Header />
       <main>
         <Hero />
         <About />
         <Bottom />
         <Footer />
-      </main>
+      </main> */}
       <Mentoria />
     </div>
   );

@@ -68,7 +68,7 @@ const Footer = () => {
           </a>
         </li>
 
-        <li className="text-xs shrink-0 ">
+        <li className="mb-1 text-xs shrink-0 ">
           <a
             className="block hover:text-green text-white"
             href="https://www.tiktok.com/@marlondsavian"

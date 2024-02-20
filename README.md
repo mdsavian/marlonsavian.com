@@ -2,7 +2,7 @@
   marlonsavian.com
 </h1>
 
-This repo is my website built with [Next.js](https://nextjs.org/) and hosted with [Vercel](https://vercel.com/)
+This repo is my website [marlonsavian.com](https://marlonsavian.com) built with [Next.js](https://nextjs.org/) and hosted with [Vercel](https://vercel.com/)
 
 ## 🛠 Instalation & Set up
 

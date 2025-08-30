@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className="relative">
-      {/* <Header /> */}
+      <Header />
       <main>
         <Hero />
         <Footer />

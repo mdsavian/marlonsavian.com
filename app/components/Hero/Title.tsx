@@ -5,10 +5,10 @@ const Title = () => {
     <AnimatedComponent
       tag="h1"
       id="header-software-engineer"
-      className="text-green text-6xl md:text-7xl font-black text-center opacity-0"
+      className="text-green text-5xl md:text-6xl font-bold text-center opacity-0"
       animationClass="animate-fade-in-up"
     >
-      Marlon <br /> Savian
+      Marlon Savian
     </AnimatedComponent>
   );
 };

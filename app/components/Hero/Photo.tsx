@@ -1,27 +1,28 @@
+import Image from "next/image";
 import PhotoShapes from "@/assets/photo-shapes.svg";
 
 interface IPhoto {
   fillSvg?: string;
   strokeSvg?: string;
 }
-const Photo = ({ fillSvg, strokeSvg }: IPhoto) => {
+const Photo = ({ fillSvg = "#94C100", strokeSvg = "#94C100" }: IPhoto) => {
   return (
-    <figure className="relative w-[20rem] sm:w-[23rem] h-[20rem] sm:h-[24rem] sm:mr-20 z-[1] ml-[2.2rem] sm:ml-0 border-[0.115rem] border-solid border-white">
+    <figure className="relative w-[200px] h-[200px] border-2 border-white rounded-full overflow-hidden">
       <PhotoShapes
-        className="absolute top-[-25%] w-[35rem] sm:w-[40rem] h-[126%] right-[-3.4rem] sm:right-[-5.4rem] z-[-1]"
+        className="absolute top-[-30%] left-[-30%] w-[160%] h-[160%] z-[-1]"
         fill={fillSvg}
         stroke={strokeSvg}
       />
-      <span
-        className="block mt-[-2.4rem] bg-white bg-cover ml-[-2.2rem]"
-        aria-label="marlon photo"
-        style={{
-          width: "inherit",
-          height: "inherit",
-          backgroundPositionX: "center",
-          backgroundImage: "url(marlon.jpeg)",
-        }}
-      />
+      <div className="w-full h-full">
+        <Image
+          src="/marlon.jpeg"
+          alt="Marlon Savian - Software Developer"
+          fill
+          className="object-cover"
+          priority
+          sizes="20rem"
+        />
+      </div>
     </figure>
   );
 };

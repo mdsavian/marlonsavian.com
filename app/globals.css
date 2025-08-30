@@ -6,6 +6,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono",
     "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono",
     "Courier New", monospace;
+  background-color: #212121;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #30334B;
+  background: #212121;
   border-radius: 4px;
 }
 

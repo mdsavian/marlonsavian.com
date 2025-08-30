@@ -82,12 +82,6 @@ export default async function PostPage({ params }: PostPageProps) {
                 day: 'numeric'
               })}
             </time>
-            {post.readTime && (
-              <>
-                <span>•</span>
-                <span>{post.readTime} min read</span>
-              </>
-            )}
           </div>
 
           <p className="text-white/80 text-lg mt-4 leading-relaxed">
@@ -109,6 +103,22 @@ export default async function PostPage({ params }: PostPageProps) {
             prose-li:text-white/90"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
+
+        {/* Tags Section */}
+        {post.tags && post.tags.length > 0 && (
+          <div className="mt-12 mb-8">
+            <div className="flex flex-wrap gap-2">
+              {post.tags.map((tag) => (
+                <span 
+                  key={tag} 
+                  className="px-2 py-1 bg-white/10 text-white/80 rounded text-xs font-medium"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Divider before navigation */}
         <Divider />

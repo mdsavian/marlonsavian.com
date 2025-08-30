@@ -2,6 +2,8 @@
 title: 'Understanding JavaScript Closures'
 description: 'A deep dive into JavaScript closures, how they work, and practical examples of their usage in modern development.'
 date: '2024-02-10'
+category: 'JavaScript'
+tags: ['JavaScript', 'Functions', 'Closures']
 ---
 
 JavaScript closures are one of the most powerful and often misunderstood concepts in the language. Understanding closures is essential for writing effective JavaScript code.

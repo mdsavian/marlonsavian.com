@@ -2,6 +2,8 @@
 title: 'Building Scalable React Applications'
 description: 'Learn the key principles and patterns for building React applications that can grow with your team and user base.'
 date: '2024-01-15'
+category: 'React'
+tags: ['React', 'Architecture', 'Best Practices']
 ---
 
 Building scalable React applications is crucial for long-term success. As your application grows, you need to ensure your codebase remains maintainable and performant.

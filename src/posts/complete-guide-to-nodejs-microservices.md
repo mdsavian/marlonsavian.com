@@ -2,6 +2,8 @@
 title: 'Complete Guide to Node.js Microservices Architecture'
 description: 'A comprehensive guide covering everything you need to know about building, deploying, and scaling microservices with Node.js.'
 date: '2024-03-05'
+category: 'Backend'
+tags: ['Node.js', 'Microservices', 'Architecture', 'Docker']
 ---
 
 Microservices architecture has become increasingly popular for building scalable, maintainable applications. This comprehensive guide will take you through everything you need to know about implementing microservices with Node.js.

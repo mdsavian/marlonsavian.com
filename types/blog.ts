@@ -2,6 +2,8 @@ export interface BlogPostMeta {
   title: string;
   description: string;
   date: string;
+  category?: string;
+  tags?: string[];
 }
 
 export interface BlogPost extends BlogPostMeta {

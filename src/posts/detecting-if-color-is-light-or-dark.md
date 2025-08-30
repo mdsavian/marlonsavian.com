@@ -2,6 +2,8 @@
 title: 'Detecting if Color is Light or Dark'
 description: 'Use this algorithm to determine relative luminance.'
 date: '2023-01-01'
+category: 'Frontend'
+tags: ['JavaScript', 'CSS', 'Color Theory']
 ---
 
 The algorithm for detecting if the color is light or dark is based on the idea that we can convert the color to [grayscale](https://en.wikipedia.org/wiki/Grayscale) and then compare the [relative luminance](https://en.wikipedia.org/wiki/Relative_luminance) with the middle of the range (between 0 and 1).

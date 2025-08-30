@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { getAllPostSlugs, getPostBySlug } from '../../../lib/blog';
 import { BlogPostData } from '../../../types/blog';
 import Divider from '../../components/Divider';
+import ScrollToTop from '../../components/ScrollToTop';
 
 interface PostPageProps {
   params: {
@@ -48,9 +49,22 @@ export default async function PostPage({ params }: PostPageProps) {
         <div className="mb-8">
           <a 
             href="/#blog" 
-            className="text-white hover:text-white/80 transition-colors text-sm"
+            className="text-white hover:text-white/80 transition-colors text-sm flex items-center gap-2"
           >
-            ← Back to Blog
+            <svg 
+              className="w-4 h-4" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M15 19l-7-7 7-7" 
+              />
+            </svg>
+            Back to Blog
           </a>
         </div>
 
@@ -126,6 +140,9 @@ export default async function PostPage({ params }: PostPageProps) {
           </nav>
         )}
       </div>
+      
+      {/* Floating Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 }

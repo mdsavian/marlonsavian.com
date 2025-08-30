@@ -1,29 +1,21 @@
 import Image from "next/image";
-import PhotoShapes from "@/assets/photo-shapes.svg";
 
 interface IPhoto {
   fillSvg?: string;
   strokeSvg?: string;
 }
-const Photo = ({ fillSvg = "#94C100", strokeSvg = "#94C100" }: IPhoto) => {
+const Photo = ({ fillSvg, strokeSvg }: IPhoto) => {
   return (
-    <figure className="relative w-[200px] h-[200px] border-2 border-white rounded-full overflow-hidden">
-      <PhotoShapes
-        className="absolute top-[-30%] left-[-30%] w-[160%] h-[160%] z-[-1]"
-        fill={fillSvg}
-        stroke={strokeSvg}
+    <div className="relative w-[20rem] sm:w-[23rem] h-[20rem] sm:h-[24rem] rounded-full overflow-hidden mx-auto">
+      <Image
+        src="/marlon.jpeg"
+        alt="Marlon Savian - Software Engineer"
+        fill
+        className="object-cover"
+        priority
+        sizes="(max-width: 640px) 20rem, 23rem"
       />
-      <div className="w-full h-full">
-        <Image
-          src="/marlon.jpeg"
-          alt="Marlon Savian - Software Developer"
-          fill
-          className="object-cover"
-          priority
-          sizes="20rem"
-        />
-      </div>
-    </figure>
+    </div>
   );
 };
 

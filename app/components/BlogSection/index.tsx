@@ -20,7 +20,6 @@ const BlogSection = ({ posts }: BlogSectionProps) => {
       return (
         post.title.toLowerCase().includes(query) ||
         post.description.toLowerCase().includes(query) ||
-        post.category?.toLowerCase().includes(query) ||
         post.tags?.some((tag) => tag.toLowerCase().includes(query))
       );
     });
@@ -101,13 +100,8 @@ const BlogSection = ({ posts }: BlogSectionProps) => {
                 {post.description}
               </p>
 
-              {/* Category and Tags */}
+              {/* Tags */}
               <div className="flex items-center gap-2 mb-4">
-                {post.category && (
-                  <span className="px-2 py-1 bg-white/10 text-white/80 rounded text-xs font-medium">
-                    {post.category}
-                  </span>
-                )}
                 {post.tags &&
                   post.tags.slice(0, 3).map((tag) => (
                     <span key={tag} className="px-2 py-1 bg-white/10 text-white/80 rounded text-xs font-medium">

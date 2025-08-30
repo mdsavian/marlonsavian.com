@@ -12,6 +12,24 @@ body {
   margin: 0;
 }
 
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30334B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d4055;
+}
+
 html {
   @media (min-width: 701px) and (max-width: 1600px) {
     font-size: 1vw;

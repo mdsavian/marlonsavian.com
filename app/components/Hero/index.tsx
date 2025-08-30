@@ -1,6 +1,4 @@
 import Photo from "./Photo";
-import SubTitle from "./Subtitle";
-import Title from "./Title";
 
 const Hero: React.FC = () => {
   return (
@@ -11,13 +9,19 @@ const Hero: React.FC = () => {
           <Photo />
         </div>
         
-        <div className="mb-8">
-          <Title />
-        </div>
+        <h1
+          id="header-software-engineer"
+          className="text-green text-5xl md:text-6xl font-bold text-center mb-8"
+        >
+          Marlon Savian
+        </h1>
         
-        <div className="mb-16 max-w-2xl">
-          <SubTitle />
-        </div>
+        <p
+          className="text-white text-xl md:text-2xl max-w-2xl text-center leading-relaxed mb-16"
+          id="span-description"
+        >
+          I&#39;m a software engineer who likes to craft solid and scalable products, always thinking about creating an exceptional user experience.
+        </p>
 
         <div className="flex items-center space-x-8 mb-20">
           {/* GitHub Icon */}

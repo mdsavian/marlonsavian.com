@@ -1,13 +1,9 @@
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 
 export default function Home() {
   return (
-    <div className="relative">
-      <Header />
-      <main>
-        <Hero />
-      </main>
+    <div className="bg-primary">
+      <Hero />
     </div>
   );
 }

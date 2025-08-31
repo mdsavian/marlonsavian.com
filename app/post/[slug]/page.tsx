@@ -76,7 +76,7 @@ export default async function PostPage({ params }: PostPageProps) {
           
           <div className="flex items-center gap-4 text-white/60 text-sm">
             <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString('en-US', {
+              {new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'

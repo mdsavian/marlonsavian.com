@@ -112,7 +112,7 @@ const BlogSection = ({ posts }: BlogSectionProps) => {
 
               <div className="flex items-center gap-3 text-white/50 text-sm text-left">
                 <time dateTime={post.date}>
-                  {new Date(post.date).toLocaleDateString("en-US", {
+                  {new Date(post.date + 'T00:00:00').toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
                     year: "numeric",

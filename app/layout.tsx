@@ -7,7 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Marlon Savian: Software Engineer",
   description: "Marlon Savian website",
-  metadataBase: new URL('https://marlonsavian.com'),
+  metadataBase: new URL("https://marlonsavian.com"),
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

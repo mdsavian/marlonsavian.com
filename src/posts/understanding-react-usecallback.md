@@ -1,7 +1,7 @@
 ---
 title: "Understanding React useCallback"
 description: "Learn how to use the useCallback hook to optimize React performance by memoizing functions between re-renders and preventing unnecessary component updates."
-date: "2021-10-02"
+date: "2023-05-11"
 category: "React"
 tags: ["React", "Hooks", "Performance", "useCallback", "Optimization"]
 ---
